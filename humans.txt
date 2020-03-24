@@ -1,0 +1,19 @@
+*
+*
+* Team:  kazuRo --- We are humans! ... Are you?
+*
+*
+*  Creator:       roTokyo
+*  WebSite:       rotokyo.github.io
+*  Photo Gallery: www.flickr.com/photos/rotokyo/albums
+*  Location:      Tokyo, Japan
+*
+*  Last updated: 2020-03-24 06:55:36 +0000
+*
+*  Language:     Japanese, English, Italiano
+*  Built with:   Jekyll 4.0.0 <https://jekyllrb.com>
+*                BBEdit <https://www.barebones.com>
+*                Atom <https://https://atom.io/>
+*                JPEGmini Lite <https://www.jpegmini.com>
+*                Real Favicon Generator <https://realfavicongenerator.net>
+*
