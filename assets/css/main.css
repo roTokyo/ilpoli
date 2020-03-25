@@ -395,6 +395,7 @@ figcaption {
   top: 0;
   will-change: transform, opacity;
   animation: progressiveReveal 1s ease-out;
+  z-index: 0;
 }
 
 @keyframes progressiveReveal {
@@ -431,6 +432,23 @@ figcaption {
   padding: 0 1.6rem;
   user-select: none;
   z-index: 10002;
+}
+
+#header a.idPrivacyFooter {
+  color: #4c4c4c;
+}
+
+#header a.idPrivacyFooter img {
+  vertical-align: middle;
+  line-height: 30px;
+  width: 3rem;
+  height: 3rem;
+  display: inline;
+  margin: 0 1rem 0.5rem 1rem;
+}
+
+#header a.idPrivacyFooter:hover {
+  color: #f08dc4;
 }
 
 #header h1 {
@@ -488,6 +506,9 @@ figcaption {
     bottom: 0;
     left: 0;
   }
+  .sectionTerms {
+    padding: 2rem 2rem 7rem;
+  }
 }
 
 /* Main Content
@@ -499,7 +520,17 @@ figcaption {
 .pageWrapper {
   margin: 0;
   padding: 0;
-  z-index: 10002;
+  position: relative;
+}
+
+.sectionTerms {
+  padding: 7rem 2rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .sectionTerms {
+    padding: 2rem 2rem 7rem;
+  }
 }
 
 .photos {
@@ -510,6 +541,7 @@ figcaption {
   align-content: stretch;
   margin: 5rem 0 0 0;
   padding: 0;
+  position: relative;
 }
 
 .photos a {
@@ -518,6 +550,7 @@ figcaption {
   flex: 0 0 auto;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 @media screen and (orientation: landscape) and (min-width: 568px) {
@@ -606,6 +639,7 @@ span.copyright a {
   overflow-y: auto;
   width: 100%;
   visibility: visible;
+  z-index: 10000;
 }
 
 .panel.active {

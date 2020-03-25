@@ -15,7 +15,7 @@
 <!-- SEO Section -->
 
   <title>
-    Roberto - Il Politrofo
+    roTokyo - Il Politrofo
       
   </title>
 
@@ -33,7 +33,7 @@
 
 
   <!-- Facebook -->
-  <meta property="og:title" content="Roberto - Il Politrofo"/>
+  <meta property="og:title" content="roTokyo - Il Politrofo"/>
   <meta property="og:locale" content="it_IT" />
   <meta property="og:description" content="Organismo capace di assimilare nutrimento da alimenti diversi. Aggiunto di «Cerere» o della «Terra» deificata che colle sue produzioni alimenta tutti i viventi." />
   <meta property="og:keywords" content="politrofo, cerere, terra, nutrimento, organismi, assimilare, alimentare, produrre, politropia" />
@@ -43,15 +43,17 @@
 
 
   <meta property="og:image" content="https://rotokyo.github.io/ilpoli/assets/images/glimps-fb.jpg" />
-  <meta property="og:image:alt" content="A glimps of a country - © roTokyo" />
+  <meta property="og:image:alt" content="A glimps of Japan - © roTokyo" />
 
 
 
   <meta property="og:type" content="article">
 
-  <meta property="article:published_time" content="2020-03-24T06:55:36+00:00">
+  <meta property="article:published_time" content="2020-03-25T00:00:00+00:00">
   <meta property="article:author" content="roTokyo">
   
+  
+  <meta property="article:modified_time" content="2020-03-25T00:00:00+00:00">
   
 
 
@@ -63,11 +65,11 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@bCard">
   <meta name="twitter:creator" content="@robertoCalesini" />
-  <meta name="twitter:title" content="Roberto - Il Politrofo" />
+  <meta name="twitter:title" content="roTokyo - Il Politrofo" />
   <meta name="twitter:description" content="Organismo capace di assimilare nutrimento da alimenti diversi. Aggiunto di «Cerere» o della «Terra» deificata che colle sue produzioni alimenta tutti i viventi." />
 
   <meta name="twitter:image" content="https://rotokyo.github.io/ilpoli/assets/images/glimps-tw.jpg" />
-  <meta name="twitter:image:alt" content="A glimps of a country - © roTokyo" />
+  <meta name="twitter:image:alt" content="A glimps of Japan - © roTokyo" />
   <meta name="twitter:url" content="https://rotokyo.github.io/ilpoli/" />
 
 
@@ -120,7 +122,10 @@
 
       <!-- Header -->
       <header class="siteHeader" id="header">
-  <h1><a href="https://rotokyo.github.io/ilpoli/"><strong>Il Politrofo</strong></a>&nbsp;&nbsp;&nbsp;by&nbsp;<a href="https://rotokyo.github.io">roTokyo</a></h1>
+    <a href="/ilpoli/pages/termini.html" class="idPrivacyFooter">
+      <img src="/ilpoli/assets/images/privacy.png" alt="Privacy Logo" title="Go to ... privacy page!">
+    </a>
+  <h1><a href="/ilpoli/"><strong>Il Politrofo</strong></a>&nbsp;&nbsp;&nbsp;by&nbsp;<a href="https://rotokyo.github.io">roTokyo</a></h1>
   <nav>
     <a href="javascript:;" onclick="openPanel()">About <span><svg fill="red" xmlns="http://www.w3.org/2000/svg" width="13px" height="13px" viewBox="0 0 512 512"><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></svg>
 </span></a>
@@ -302,6 +307,12 @@
 
   
 
+  
+
+  
+
+  
+
 </div>
 
 
@@ -311,7 +322,7 @@
       <!-- Footer -->
       
 
-<footer id="idPrivacyFooter" class="siteFooter panel">
+<footer id="idPrivacyFooter" class="siteFooter panel" lang="en-GB">
   <div class="closer" onclick="closePanel()"></div>
   <div class="wrapper wrapperFooter inner split">
     <div>
@@ -1146,31 +1157,26 @@ $(document).on('lity:ready', function(event, instance) {
 
     var imgExif = document.getElementById("imgLoaded");
 
-    EXIF.getData(imgExif, function() {
+    EXIF.getData(imgExif, function () {
+      var titolo = EXIF.getTag(this, "FotoTitle");
+      var modello = EXIF.getTag(this, "Model");
+      var obiettivo = EXIF.getTag(this, "LensModel");
+      var apertura = EXIF.getTag(this, "FNumber");
+      var texp = EXIF.getTag(this, "ExposureTime");
+      var iso = EXIF.getTag(this, "ISO");
+      var lf = EXIF.getTag(this, "FocalLength");
+      var artista = EXIF.getTag(this, "Artist");
+      var citta = EXIF.getTag(this, "ArtistCity");
+      var paese = EXIF.getTag(this, "ArtistCountry");
+      var sito = EXIF.getTag(this, "ArtistWorkURL");
+      var copyowner = EXIF.getTag(this, "CopyRightsOwner");
+      var termini = EXIF.getTag(this, "UsageTerms");
+      var macchina = "<h5>" + modello + " " + obiettivo + "</h5>";
+      var datifoto = "<h6>" + "ƒ/" + apertura + " " + texp + "sec " + "ISO " + iso + " FL " + lf + " mm" + "</h6>";
+      var fotografo = "<h6> by&nbsp;&nbsp;<b>©</b>&nbsp;" + '<span class="red">' + artista + "</span></h6>"; //var copyright = "" + copyowner + " " + termini;
 
-        var titolo =    EXIF.getTag(this, "FotoTitle");
-
-        var modello =   EXIF.getTag(this, "Model");
-        var obiettivo = EXIF.getTag(this, "LensModel");
-        var apertura =  EXIF.getTag(this, "FNumber");
-        var texp =      EXIF.getTag(this, "ExposureTime");
-        var iso =       EXIF.getTag(this, "ISO");
-        var lf =        EXIF.getTag(this, "FocalLength");
-
-        var artista =   EXIF.getTag(this, "Artist");
-        var citta =     EXIF.getTag(this, "ArtistCity");
-        var paese =     EXIF.getTag(this, "ArtistCountry");
-        var sito =      EXIF.getTag(this, "ArtistWorkURL");
-        var copyowner = EXIF.getTag(this, "CopyRightsOwner");
-        var termini =   EXIF.getTag(this, "UsageTerms");
-
-        var macchina  = "<h5>" + modello + " " + obiettivo + "</h5>";
-        var datifoto  = "<h6>" + "ƒ/" + apertura + " " + texp + "sec " + "ISO " + iso + " FL " + lf + " mm" +  "</h6>";
-        var fotografo = "<h6> by&nbsp;&nbsp;<b>©</b>&nbsp;" + '<span class="red">' + artista + "</span></h6>";
-        //var copyright = "" + copyowner + " " + termini;
-
-        var datiLetti = document.getElementById("datiLoadedImage");
-        datiLetti.innerHTML = `<h5>${titolo}</h5>${macchina}${datifoto}${fotografo}`;
+      var datiLetti = document.getElementById("datiLoadedImage");
+      datiLetti.innerHTML = "<h5>".concat(titolo, "</h5>").concat(macchina).concat(datifoto).concat(fotografo);
     });
 
 
