@@ -417,13 +417,13 @@ figcaption {
  *- Footer
  *
  * ––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Headere and Navigation
+/* Header and Navigation
  *
  * ––––––––––––––––––––––––––––––––––––––––––––––––– */
 #header {
   position: fixed;
-  top: 0;
-  bottom: auto;
+  top: auto;
+  bottom: 0;
   left: 0;
   background-color: #1F2224;
   width: 100%;
@@ -499,18 +499,6 @@ figcaption {
   vertical-align: middle;
 }
 
-@media screen and (min-width: 768px) {
-  #header {
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    left: 0;
-  }
-  .sectionTerms {
-    padding: 2rem 2rem 7rem;
-  }
-}
-
 /* Main Content
  *
  * ––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -539,7 +527,7 @@ figcaption {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: stretch;
-  margin: 5rem 0 0 0;
+  margin: 0 0 5rem 0;
   padding: 0;
   position: relative;
 }
@@ -575,9 +563,6 @@ figcaption {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .photos {
-    margin: 0 0 5rem 0;
-  }
   .photos a {
     width: calc(100%/4);
     height: calc(100%/4);
@@ -585,9 +570,6 @@ figcaption {
 }
 
 @media screen and (min-width: 1024px) {
-  .photos {
-    margin: 0 0 5rem 0;
-  }
   .photos a {
     width: calc(100%/6);
     height: calc(100%/6);
@@ -628,12 +610,12 @@ span.copyright a {
 
 .panel {
   position: fixed;
-  top: calc(5rem - 1px);
-  bottom: auto;
+  top: auto;
+  bottom: calc(5rem - 1px);
   left: 0;
   max-height: calc(80vh - 5rem);
   padding: 0 2.5rem;
-  transform: translateY(-100vh);
+  transform: translateY(100vh);
   transition: transform 0.5s ease;
   background-color: rgba(37, 40, 42, 0.9);
   overflow-y: auto;
@@ -694,14 +676,6 @@ span.copyright a {
   .avatar {
     display: flex;
     align-items: baseline;
-  }
-  .panel {
-    position: fixed;
-    top: auto;
-    bottom: calc(5rem - 1px);
-    left: 0;
-    visibility: visible;
-    transform: translateY(100vh);
   }
   .panel > .inner {
     width: 95rem;
