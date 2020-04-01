@@ -1,6 +1,5 @@
 # Il politrofo  
-Organismo capace di assimilare nutrimento da alimenti diversi.  
-> Aggiunto di «Cerere» o della «Terra» deificata che colle sue produzioni alimenta tutti i viventi.  
+Organismo capace di assimilare nutrimento da alimenti diversi.    
 
 
 [![Jekyll](https://img.shields.io/badge/jekyll---ver%204.0---blue.svg)](https://jekyllrb.com/)
